@@ -374,7 +374,7 @@ a {
       var(--color-hero-background),
       var(--color-hero-background)
     ),
-    url("../images/main/1x/people-office.jpg");
+    url("../images/main/1x/people-office-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
