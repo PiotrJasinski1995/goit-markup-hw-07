@@ -482,6 +482,28 @@ a {
   line-height: 1.5;
 }
 
+.section.work-section {
+  padding-top: 0;
+  display: none;
+}
+
+.work-section .section-heading,
+.team-section .section-heading,
+.customers-section .section-heading {
+  margin-bottom: 72px;
+}
+
+.work-section .work-list {
+  display: flex;
+  gap: var(--list-item-gap);
+  justify-content: center;
+  align-items: center;
+}
+
+.work-list > .work-list-item {
+  flex-basis: calc((100% - 2 * var(--list-item-gap)) / 3);
+}
+
 .backdrop {
   position: fixed;
   width: 100%;
@@ -850,6 +872,10 @@ a {
 
 .list-item .item-description {
   font-weight: normal;
+}
+
+.section.work-section {
+  display: block;
 }
 
   .modal {
