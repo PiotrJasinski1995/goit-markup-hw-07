@@ -23,7 +23,7 @@
     <header class="header">
       <div class="container header-wrapper">
         <nav class="navigation-links">
-          <a class="link navigation-link logo" href="./index.html">
+          <a class="link logo" href="./index.html">
             Web<span class="studio-element">Studio</span>
           </a>
           <ul class="list navigation-menu">
@@ -54,6 +54,15 @@
             </li>
           </ul>
         </address>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu-open-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -473,10 +482,98 @@
       </div>
     </footer>
 
+    <div class="menu-container js-menu-container">
+      <button
+        class="menu-toggle js-close-menu btn close-btn mobile-menu-close-btn"
+      >
+        <svg class="mobile-menu-close-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="navigation-links">
+        <ul class="list navigation-menu">
+          <li>
+            <a class="link navigation-link current-page" href="./index.html">
+              Studio
+            </a>
+          </li>
+          <li>
+            <a class="link navigation-link" href="./portfolio.html">
+              Portfolio
+            </a>
+          </li>
+          <li><a class="link navigation-link" href="#0">Contacts</a></li>
+        </ul>
+      </nav>
+      <address class="address">
+        <ul class="list contact-links">
+          <li>
+            <a class="link contact-link phone-link" href="tel.:+110001111111">
+              +11 (000) 111-11-11
+            </a>
+          </li>
+          <li>
+            <a
+              class="link contact-link email-link"
+              href="mailto:info@devstudio.com"
+            >
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+      </address>
+      <ul class="mobile-menu-social-list">
+        <li class="mobile-menu-social-list-item">
+          <a class="link social-link mobile-menu-social-link" href="#0">
+            <svg
+              class="social-icon mobile-menu-social-icon"
+              width="24"
+              height="24"
+            >
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-social-list-item">
+          <a class="link social-link mobile-menu-social-lin" href="#0">
+            <svg
+              class="social-icon mobile-menu-social-icon"
+              width="24"
+              height="24"
+            >
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-social-list-item">
+          <a class="link social-link mobile-menu-social-lin" href="#0">
+            <svg
+              class="social-icon mobile-menu-social-icon"
+              width="24"
+              height="24"
+            >
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-social-list-item">
+          <a class="link social-link mobile-menu-social-lin" href="#0">
+            <svg
+              class="social-icon mobile-menu-social-icon"
+              width="24"
+              height="24"
+            >
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-btn" data-modal-close>
-          <svg class="close-icon" width="8" height="8">
+        <button class="btn close-btn modal-close-btn" data-modal-close>
+          <svg class="close-icon modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -589,6 +686,7 @@
       </div>
     </div>
 
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
