@@ -255,6 +255,18 @@ a {
   background-color: transparent;
 }
 
+.btn {
+  cursor: pointer;
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-item-heading);
+  line-height: var(--line-height-text);
+  letter-spacing: var(--letter-spacing-button);
+  text-align: center;
+  transition: color var(--transition-general),
+    background-color var(--transition-general);
+}
+
 .btn.close-btn {
   position: absolute;
   display: flex;
@@ -272,25 +284,18 @@ a {
     --color-main var(--transition-general);
 }
 
-.menu-container .mobile-menu-close-btn {
-  background-color: var(--color-light-accent);
-  border: 1px solid var(--color-light-dark);
-  border-radius: 50%;
-  --color-main: var(--color-dark);
-}
-
-.modal .modal-close-btn {
-  background-color: var(--color-accent);
-  border: 1px solid #0000001a;
-  border-radius: 50%;
-  --color-main: var(--color-dark);
-}
-
 .btn.close-btn:hover,
 .btn.close-btn:focus,
 .btn.close-btn:active {
   background-color: var(--color-pressed-state);
   --color-main: var(--color-white);
+}
+
+.menu-container .mobile-menu-close-btn {
+  background-color: var(--color-light-accent);
+  border: 1px solid var(--color-light-dark);
+  border-radius: 50%;
+  --color-main: var(--color-dark);
 }
 
 .menu-container .navigation-links {
@@ -361,6 +366,65 @@ a {
   background-color: var(--color-pressed-state);
 }
 
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px; 
+}
+
+.section.hero-section {
+  background-color: var(--color-dark);
+  background-image: linear-gradient(
+      var(--color-hero-background),
+      var(--color-hero-background)
+    ),
+    url("../images/main/1x/people-office-mobile-428.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 428px;
+  margin: 0 auto;
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section.hero-section{
+    background-image: url("../images/main/2x/people-office-mobile-428@2x.jpg");
+  }
+}
+
+.hero-heading {
+  font-size: var(--font-size-section-heading);
+  font-weight: var(--font-weight-hero-heading);
+  line-height: var(--line-height-section-heading);
+  max-width: 320px;
+  margin-inline: auto;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.hero-section .section-heading {
+  color: var(--color-white);
+}
+
+.hero-section .btn {
+  color: var(--color-white);
+  background-color: var(--color-primary-brand);
+  display: block;
+  padding: 16px 32px;
+  margin: 72px auto 0;
+  box-shadow: 0px 4px 4px 0px #00000026;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: var(--color-white);
+  background-color: var(--color-pressed-state);
+}
+
 .backdrop {
   position: fixed;
   width: 100%;
@@ -387,6 +451,13 @@ a {
 
 .modal > .modal-wrapper {
   padding: 72px 24px 24px;
+}
+
+.modal .modal-close-btn {
+  background-color: var(--color-accent);
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  --color-main: var(--color-dark);
 }
 
  .modal-wrapper > .modal-title {
@@ -598,6 +669,33 @@ a {
   .header-wrapper .menu-toggle {
     display: none;
   }
+
+  .section.hero-section {
+  background-image: linear-gradient(
+      var(--color-hero-background),
+      var(--color-hero-background)
+    ),
+    url("../images/main/1x/people-office-tablet-768.jpg");
+  max-width: 768px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section.hero-section{
+    background-image: url("../images/main/2x/people-office-tablet768@2x.jpg");
+  }
+}
+
+.hero-heading {
+  font-size: var(--font-size-hero-heading);
+  line-height: var(--line-height-hero-heading);
+  max-width: 496px;
+}
+
+.hero-section .btn {
+  margin-top: 36px;
+}
 }
 
 @media screen and (768px <= width < 1158px) {
@@ -622,6 +720,34 @@ a {
     flex-direction: row;
     gap: 40px;
   }
+
+  .section {
+  padding-top: 120px;
+  padding-bottom: 120px; 
+}
+
+.section.hero-section {
+  background-image: linear-gradient(
+      var(--color-hero-background),
+      var(--color-hero-background)
+    ),
+    url("../images/main/1x/people-office-desktop-1440.jpg");
+  max-width: 1440px;
+  padding-top: 188px;
+  padding-bottom: 188px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section.hero-section{
+    background-image: url("../images/main/2x/people-office-desktop-1440@2x.jpg");
+  }
+}
+
+.hero-section .btn {
+  margin-top: 48px;
+}
 
   .modal {
     width: 408px;
@@ -859,18 +985,6 @@ a {
   background-color: var(--color-white);
 }
 
-.btn {
-  cursor: pointer;
-  font-family: var(--font-family-text);
-  font-size: var(--font-size-text);
-  font-weight: var(--font-weight-item-heading);
-  line-height: var(--line-height-text);
-  letter-spacing: var(--letter-spacing-button);
-  text-align: center;
-  transition: color var(--transition-general),
-    background-color var(--transition-general);
-}
-
 .hero-section .btn {
   color: var(--color-white);
   background-color: var(--color-primary-brand);
@@ -888,13 +1002,6 @@ a {
   transition: color var(--transition-general),
     background-color var(--transition-general),
     border-color var(--transition-general), box-shadow var(--transition-general);
-}
-
-.btn:hover,
-.btn:focus,
-.btn:active {
-  color: var(--color-white);
-  background-color: var(--color-pressed-state);
 }
 
 .portfolio-filter-list .btn:hover,
