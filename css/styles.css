@@ -51,6 +51,7 @@
   --footer-list-item-gap: 16px;
   --list-item-content-gap: 8px;
   --mobile-menu-social-list-gap: 56px;
+  --mobile-customers-gap: 16px;
 
   --transition-general-duration: 250ms;
   --transition-general-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -440,6 +441,7 @@ a {
 .strengths-section .strengths-list {
   display: flex;
   flex-direction: column;
+  column-gap: var(--list-item-gap);
   row-gap: calc(3 * var(--list-item-gap));
   justify-content: center;
   align-items: center;
@@ -511,6 +513,7 @@ a {
 .team-section .team-list {
   display: flex;
   flex-direction: column;
+  column-gap: var(--list-item-gap);
   row-gap: calc(3 * var(--list-item-gap));
   justify-content: center;
   align-items: center;
@@ -536,6 +539,35 @@ a {
 .team-social-list {
   display: flex;
   gap: var(--list-item-gap);
+}
+
+.customers-list {
+  display: flex;
+  column-gap: var(--mobile-customers-gap);
+  row-gap: calc(3 * var(--list-item-gap));
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.link.customer-link {
+  display: flex;
+  width: 168px;
+  height: 88px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--color-subtle-text);
+  --color-main: var(--color-subtle-text);
+  transition: border-color var(--transition-general),
+    --color-main var(--transition-general);
+}
+
+.link.customer-link:hover,
+.link.customer-link:focus,
+.link.customer-link:active {
+  border-color: var(--color-pressed-state);
+  --color-main: var(--color-pressed-state);
 }
 
 .backdrop {
@@ -812,7 +844,6 @@ a {
 
 .strengths-section .strengths-list {
   flex-direction: row;
-  column-gap: var(--list-item-gap);
 }
 
 .strengths-list .item-heading {
@@ -825,6 +856,9 @@ a {
 
 .team-section .team-list {
   flex-direction: row;
+}
+
+.customers-list {
   column-gap: var(--list-item-gap);
 }
 }
@@ -911,7 +945,11 @@ a {
 }
 
 .team-list > .team-list-item {
-  flex-basis: calc((100% - 3 * var(--list-item-gap)) / 4);
+  /* flex-basis: calc((100% - 3 * var(--list-item-gap)) / 4); */
+}
+
+.customers-list {
+  flex-wrap: nowrap;
 }
 
   .modal {
