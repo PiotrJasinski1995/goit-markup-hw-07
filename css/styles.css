@@ -465,6 +465,14 @@ a {
   text-align: center;
 }
 
+.list-item .item-role {
+  color: var(--color-text);
+  font-size: var(--font-size-text);
+  line-height: 1.5;
+  letter-spacing: var(--letter-spacing-text);
+  text-transform: var(--text-transform-item-role);
+}
+
 .list-item .item-description {
   font-size: var(--font-size-text);
   font-weight: var(--font-weight-item-heading);
